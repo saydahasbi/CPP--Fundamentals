@@ -1,7 +1,29 @@
-<Solution>
-  <Configurations>
-    <Platform Name="x64" />
-    <Platform Name="x86" />
-  </Configurations>
-  <Project Path="programming lab 5 qn 3.vcxproj" />
-</Solution>
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+    double cookiesToMake;
+    double sugarNeeded, butterNeeded, flourNeeded;
+
+    const double baseCookies = 48.0;
+    const double baseSugar = 1.5;
+    const double baseButter = 1.0;
+    const double baseFlour = 2.75;
+
+    cout << "Enter the number of cookies you want to make: ";
+    cin >> cookiesToMake;
+
+    sugarNeeded = (cookiesToMake / baseCookies) * baseSugar;
+    butterNeeded = (cookiesToMake / baseCookies) * baseButter;
+    flourNeeded = (cookiesToMake / baseCookies) * baseFlour;
+
+    cout << fixed << setprecision(2);
+    cout << "\nTo make " << cookiesToMake << " cookies, you will need:" << endl;
+    cout << "- Sugar: " << sugarNeeded << " cups" << endl;
+    cout << "- Butter: " << butterNeeded << " cups" << endl;
+    cout << "- Flour: " << flourNeeded << " cups" << endl;
+
+    return 0;
+}

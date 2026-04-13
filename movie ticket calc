@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+
+    string movieName;
+    int adultTickets, childTickets;
+    double revenue, profit, distributorAmount;
+
+    cout << "Enter movie name: ";
+    getline(cin, movieName);
+
+    cout << "Enter number of adult tickets sold: ";
+    cin >> adultTickets;
+
+    cout << "Enter number of child tickets sold: ";
+    cin >> childTickets;
+
+    revenue = (adultTickets * 10.0) + (childTickets * 6.0);
+
+    profit = revenue * 0.20;
+
+    distributorAmount = revenue * 0.80;
+
+    cout << fixed << setprecision(2);
+    cout << "\n--- Movie Revenue Report ---" << endl;
+    cout << "Movie Name:                " << movieName << endl;
+    cout << "Adult Tickets Sold:        " << adultTickets << endl;
+    cout << "Child Tickets Sold:        " << childTickets << endl;
+    cout << "Total Revenue (RM):        " << revenue << endl;
+    cout << "Theatre Profit (RM):       " << profit << endl;
+    cout << "Distributor Amount (RM):   " << distributorAmount << endl;
+
+    return 0;
+}

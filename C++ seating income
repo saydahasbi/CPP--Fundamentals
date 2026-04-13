@@ -1,0 +1,31 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+
+	const int cA = 15;
+		const int cB = 12;
+		const int cC = 9;
+
+		int ticketA, ticketB, ticketC;
+
+		double totalincome;
+
+		cout << "Enter class A tickets sold: ";
+		cin >> ticketA;
+		cout << "Enter class B tickets sold: ";
+		cin >> ticketB;
+		cout << "Enter class C tickets sold: ";
+		cin >> ticketC;
+
+		totalincome = (ticketA * cA) + (ticketB * cB) + (ticketC * cC);
+
+		cout << fixed << setprecision(2);
+
+		cout << "Total amount of income: RM " << totalincome << endl;
+
+		return 0;
+
+}

@@ -1,0 +1,50 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+
+    int quantity;
+    const double RETAIL_PRICE = 99.0;
+    double discountRate = 0.0;
+    double totalCost, discountAmount;
+
+    cout << "Enter the number of units sold: ";
+    cin >> quantity;
+
+    if (quantity <= 0) {
+        cout << "Invalid quantity. Please enter a number greater than 0." << endl;
+    }
+    else {
+
+        if (quantity >= 100) {
+            discountRate = 0.50; 
+        }
+        else if (quantity >= 50) {
+            discountRate = 0.40; 
+        }
+        else if (quantity >= 20) {
+            discountRate = 0.30; 
+        }
+        else if (quantity >= 10) {
+            discountRate = 0.20; 
+        }
+        else {
+            discountRate = 0.0;
+        }
+
+        double subtotal = quantity * RETAIL_PRICE;
+        discountAmount = subtotal * discountRate;
+        totalCost = subtotal - discountAmount;
+
+        cout << fixed << setprecision(2);
+        cout << "\n--- Purchase Summary ---" << endl;
+        cout << "Units sold:      " << quantity << endl;
+        cout << "Discount Rate:   " << (discountRate * 100) << "%" << endl;
+        cout << "Discount Amount: RM " << discountAmount << endl;
+        cout << "Total Cost:      RM " << totalCost << endl;
+    }
+
+    return 0;
+}

@@ -1,0 +1,18 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+	const double PAY_AMOUNT = 2200.91;
+	const int PAY_PERIODS = 26;
+
+	double anualpay;
+
+	anualpay = PAY_AMOUNT * PAY_PERIODS;
+
+	cout << fixed << setprecision(2);
+	
+	cout << "this employee's anual pay amount is: " << anualpay << endl;
+
+	return 0;
+}

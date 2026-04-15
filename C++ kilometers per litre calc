@@ -1,0 +1,19 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+	double tankmaxcapacity = 56.0;
+	double maxdistance = 604.0;
+
+	double kpl;
+
+	kpl = maxdistance / tankmaxcapacity;
+
+	cout << fixed << setprecision(2);
+
+	cout << "the car gets " << kpl << " kilometer per litre." << endl;
+
+	return 0;
+}

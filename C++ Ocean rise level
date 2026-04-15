@@ -1,0 +1,22 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+	const double rise_rate = 1.5;
+
+	double risein5yrs, risein7yrs, risein10yrs;
+
+	risein5yrs = rise_rate * 5;
+	risein7yrs = rise_rate * 7;
+	risein10yrs = rise_rate * 10;
+
+	cout << fixed << setprecision(1);
+
+	cout << "Projected ocean level rise:" << endl;
+	cout << "In 5 years: " << risein5yrs << " millimeters" << endl;
+	cout << "In 7 years: " << risein7yrs << " millimeters" << endl;
+	cout << "In 10 years: " << risein10yrs << " millimeters" << endl;
+
+	return 0;
+}

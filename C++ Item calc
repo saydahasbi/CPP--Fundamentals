@@ -1,0 +1,33 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+	const double tax_price = 0.06;
+
+	double item1 = 15.95;
+	double item2 = 24.95;
+	double item3 = 6.95;
+	double item4 = 12.95;
+	double item5 = 3.95;
+
+	double subtotal, salestax, total;
+
+	subtotal = item1 + item2 + item3 + item4 + item5;
+	salestax = subtotal * 0.06;
+	total = subtotal + salestax;
+
+	cout << fixed << setprecision(2);
+
+	cout << "Item 1: RM" << item1 << endl;
+	cout << "Item 2: RM" << item2 << endl;
+	cout << "Item 3: RM" << item3 << endl;
+	cout << "Item 4: RM" << item4 << endl;
+	cout << "Item 5: RM" << item5 << endl;
+	cout << "------------------------" << endl;
+	cout << "Subtotal:  RM" << subtotal << endl;
+	cout << "Sales Tax: RM" << salestax << " (6%)" << endl;
+	cout << "Total:     RM" << total << endl;
+
+	return 0;
+}

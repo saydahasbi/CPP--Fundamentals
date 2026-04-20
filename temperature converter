@@ -1,0 +1,45 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+	int choice;
+	double celcius;
+	double total = 0;
+
+	cout << "----temperature conversion-----" << endl;
+	cout << "1. fahrenheit " << endl;
+	cout << "2. kelvin " << endl;
+	cout << "3. reaumur " << endl;
+	cout << "enter your temperature in celcius: ";
+	cin >> celcius;
+
+	if (celcius <= -273.15) {
+		cout << "invalid!" << endl;
+	}
+	else {
+		cout << "enter your temperature that you want to convert to: " << endl;
+		cin >> choice;
+	}
+
+	switch (choice) {
+	case 1:
+		total = (celcius * 9 / 5) + 32;
+		break;
+	case 2:
+		total = celcius + 273.15;
+		break;
+	case 3:
+		total = celcius * 4 / 5;
+		break;
+	default:
+		cout << "invalid" << endl;
+		return 1;
+	}
+
+	cout << fixed << setprecision(2);
+	cout << "your final answer is: " << total << endl;
+
+	return 0;
+}

@@ -1,0 +1,56 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+	char mealsets;
+	int quantity;
+	double price = 0, subtotal, discount = 0, finaltotal;
+
+	cout << "-----menu list-----" << endl;
+	cout << "a. burger and fries (rm 15.00)" << endl;
+	cout << "b. chicken and rice (rm 18.00)" << endl;
+	cout << "c. family feast (rm 35.00)" << endl;
+	cout << "Enter your meal selection (a, b, or c): ";
+	cin >> mealsets;
+
+	switch (mealsets) {
+	case 'a':
+		price = 15.00;
+		break;
+	case 'b':
+		price = 18.00;
+		break;
+	case 'c':
+		price = 35.00;
+		break;
+	default:
+		cout << "invalid meal selection" << endl;
+		return 0;
+	}
+
+	cout << "enter quantity: ";
+	cin >> quantity;
+
+	if (quantity <= 0) {
+		cout << "quantity must be more than 0." << endl;
+
+	}
+	else {
+		subtotal = price * quantity;
+	}
+	if (subtotal > 30.00) {
+		discount = subtotal * 0.10;
+	}
+
+	finaltotal = subtotal - discount;
+
+	cout << fixed << setprecision(2);
+	cout << "-----receipt-----" << endl;
+	cout << "subtotal: RM " << subtotal << endl;
+	cout << "discount (10%): RM " << discount << endl;
+	cout << "final total; RM " << finaltotal << endl;
+
+return 0;
+}

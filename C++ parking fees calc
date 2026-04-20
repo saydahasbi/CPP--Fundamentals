@@ -1,0 +1,47 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+	int vehicletype;
+	double hours, totalfees;
+
+	cout << "-----parking fees calculation-----" << endl;
+	cout << "1. motorcycle (rm 2.00 flat)" << endl;
+	cout << "2. car (rm 3.00 per hour)" << endl;
+	cout << "3. truck (rm 5.00 per hour)" << endl;
+	cout << "enter vehicle type: ";
+	cin >> vehicletype;
+
+	if (vehicletype < 1 || vehicletype > 3) {
+		cout << "invalid" << endl;
+	}
+	else {
+		cout << "enter hours parked: " << endl;
+		cin >> hours;
+
+		if (hours < 0) {
+			cout << "invalid" << endl;
+		}
+		else {
+			switch (vehicletype) {
+			case 1:
+				totalfees = 2.00;
+				break;
+			case 2:
+				totalfees = hours * 3.00;
+				break;
+			case 3:
+				totalfees = hours * 5.00;
+				break;
+			default:
+				totalfees = 0;
+			}
+
+			cout << fixed << setprecision(2);
+			cout << " total fees to pay. RM " << totalfees << endl;
+		}
+	}
+return 0;
+}
